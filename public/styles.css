@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#search {
+  padding: 10px;
+  font-size: 16px;
+  flex: 1 1 auto; /* Adjusts to available space */
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background: hsl(211, 96%, 20%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  flex-shrink: 0; /* Prevents button from shrinking */
+}
+
+button:hover {
+  background: hsl(211, 96%, 20%);
+}
+
+#discussions, #messages {
+  margin: 20px 0;
+}
+
+.discussion {
+  padding: 15px;
+  background: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.discussion:hover {
+  background: #f0f0f0;
+}
+
+#chat {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+#messageInput {
+  width: calc(100% - 90px);
+  padding: 10px;
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: stretch; /* Ensures items span full width */
+  }
+
+  #search {
+    margin-bottom: 10px;
+    width: 100%; /* Full width for input on small screens */
+  }
+
+  button {
+    width: 100%; /* Full width button on small screens */
+  }
+
+  #messageInput {
+    width: calc(100% - 70px);
+    margin: 0 0 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .discussion {
+    padding: 10px;
+    font-size: 14px; /* Slightly smaller text for very small screens */
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px; /* Smaller buttons */
+  }
+}
